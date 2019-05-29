@@ -12,6 +12,24 @@ public class RekeningEndpoint {
 	@Autowired
 	RekeningService rs;
 	
+	@GetMapping("allerekeningen")
+	public Iterable<Rekening> toonAlleRekeningen() {
+		return rs.alleRekeningenGeven();
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@GetMapping("hallo")
 	public Rekening eenNaam() {
 		Rekening r = new Rekening();

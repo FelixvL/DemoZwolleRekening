@@ -20,6 +20,18 @@ public class RekeningService {
 	@Autowired
 	public BankRepository bRepository;
 	
+	public Iterable<Rekening> alleRekeningenGeven() {
+		Iterable<Rekening> rekeningen = rekRepository.findAll();
+		
+		
+		return rekeningen;
+	}
+	
+	
+	
+	
+	
+	
 	public String inRekeningService() {
 		rekRepository.save(new Rekening());
 		Iterable<Bank> banken = bRepository.findAll();
