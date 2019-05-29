@@ -27,7 +27,9 @@ public class RekeningService {
 		return rekeningen;
 	}
 	
-	
+	public void maakNieuweRekening(Rekening rekening) {
+		rekRepository.save(rekening);
+	}
 	
 	
 	
